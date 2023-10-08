@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    container_name: os-file-manager-web
+    image: senioritymeter/os-file-manager:latest
+    environment:
+      AWS_S3_BUCKET_NAME: os-file-manager
+      AWS_SECRET_KEY: ${AWS_SECRET_KEY}
+      AWS_ACCESS_KEY: ${AWS_ACCESS_KEY}
+    ports:
+      - "8080:8080"
