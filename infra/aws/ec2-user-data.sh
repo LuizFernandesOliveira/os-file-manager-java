@@ -19,9 +19,9 @@ export AWS_ACCESS_KEY_ID=asdasdasd
 export AWS_SECRET_ACCESS_KEY=asdasdasdas
 
 # Init Service
-docker run --name=os-file-manager senioritymeter/os-file-manager:latest \
+docker run --name=os-file-manager lfooficial/os-file-manager:latest \
   -p 80:8080 \
-  -e AWS_S3_BUCKET_NAME=seniority-meter \
+  -e AWS_S3_BUCKET_NAME=os-file-manager \
   -e AWS_SECRET_KEY=AWS_ACCESS_KEY_ID \
   -e AWS_ACCESS_KEY=AWS_SECRET_ACCESS_KEY \
 
