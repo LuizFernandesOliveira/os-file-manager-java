@@ -1,6 +1,9 @@
 # Open Source - File Manager
 
-
+### Passos para deploy
+ - crie uma bucket no S3 da AWS;
+ - crie um usuário com permissão de escrita e leitura na bucket criada;
+ - crie uma instancia EC2 na AWS com o user-data da pasta infra/aws/ec2-user-data.sh;
 
 ### Documentation
 

@@ -2,7 +2,7 @@
 
 # Install Docker
 sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg lsb-release
+sudo apt-get install ca-certificates curl gnupg lsb-release -y
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
@@ -19,9 +19,10 @@ export AWS_ACCESS_KEY_ID=asdasdasd
 export AWS_SECRET_ACCESS_KEY=asdasdasdas
 
 # Init Service
-docker run --name=os-file-manager lfooficial/os-file-manager:latest \
+docker run \
   -p 80:8080 \
   -e AWS_S3_BUCKET_NAME=os-file-manager \
   -e AWS_SECRET_KEY=AWS_ACCESS_KEY_ID \
   -e AWS_ACCESS_KEY=AWS_SECRET_ACCESS_KEY \
+  --name=os-file-manager lfooficial/os-file-manager:latest
 
