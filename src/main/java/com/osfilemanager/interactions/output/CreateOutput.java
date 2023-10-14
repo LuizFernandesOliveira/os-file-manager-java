@@ -1,6 +1,6 @@
 package com.osfilemanager.interactions.output;
 
-import com.osfilemanager.api.http.output.CreateHTTPOutput;
+import com.osfilemanager.api.http.output.CreateFileHTTPOutput;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import lombok.Getter;
 public class CreateOutput {
   public String url;
 
-  public CreateHTTPOutput toHTTPOutput() {
-    return CreateHTTPOutput.builder().url(url).build();
+  public CreateFileHTTPOutput toHTTPOutput() {
+    return CreateFileHTTPOutput.builder().url(url).build();
   }
 }

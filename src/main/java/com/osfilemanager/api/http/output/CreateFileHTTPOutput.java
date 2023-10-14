@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateHTTPOutput {
+public class CreateFileHTTPOutput {
   private String url;
 }
