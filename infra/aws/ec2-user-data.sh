@@ -15,14 +15,12 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker $USER
 sudo chmod 666 /var/run/docker.sock
 
-export AWS_ACCESS_KEY_ID=asdasdasd
-export AWS_SECRET_ACCESS_KEY=asdasdasdas
-
 # Init Service
 docker run \
+  -d \
   -p 80:8080 \
-  -e AWS_S3_BUCKET_NAME=os-file-manager \
-  -e AWS_SECRET_KEY=AWS_ACCESS_KEY_ID \
-  -e AWS_ACCESS_KEY=AWS_SECRET_ACCESS_KEY \
+  -e AWS_S3_BUCKET_NAME=--- \
+  -e AWS_SECRET_KEY=------- \
+  -e AWS_ACCESS_KEY=------- \
   --name=os-file-manager lfooficial/os-file-manager:latest
 
